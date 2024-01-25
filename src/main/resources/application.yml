@@ -1,0 +1,33 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+
+  mail:
+    host: localhost
+    port: 1025
+    username: hello
+    password: hello
+    protocol: smtp
+    tls: true
+    properties:
+      mail:
+        smtp:
+          ssl:
+            trust: "*"
+          starttls:
+            enable: false
+          auth: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+  datasource:
+    password: password
+    username: newuser
+    url: jdbc:mysql://localhost:3306/registration

@@ -8,11 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Service;
 
 @AllArgsConstructor
 @Service
 @Slf4j
+@EnableAsync
 public class EmailService implements EmailSender{
 
     private final JavaMailSender javaMailSender;
